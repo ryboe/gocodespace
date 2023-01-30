@@ -17,7 +17,7 @@ These development tools are preinstalled:
 
 ## Usage
 
-```json
+```jsonc
 // .devcontainer/devcontainer.json
 {
     "name": "My Go Codespace",

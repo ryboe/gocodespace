@@ -22,6 +22,15 @@ These development tools are preinstalled:
 {
     "name": "My Go Codespace",
     "image": "ghcr.io/ryboe/gocodespace:1.19",
+    // dlv needs these capabilities. It needs to run the ptrace (process trace)
+    // syscall, and we need to disable the default seccomp profile applied to
+    // docker containers.
+    //   https://github.com/go-delve/delve/blob/master/Documentation/faq.md#how-do-i-use-delve-with-docker
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--security-opt",
+        "seccomp=unconfined"
+    ],
     "settings": {
         // full list of Go extension settings: https://github.com/golang/vscode-go/wiki/settings
         "editor.formatOnSave": true,

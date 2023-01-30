@@ -43,7 +43,7 @@ jobs:
           # faster.
           cache-to: type=gha,mode=max
       - name: Push 'latest' tag
-        if: matrix.go-version == ${{ env.LATEST_GO_VERSION }}
+        if: ${{ matrix.go-version }} == '${{ env.LATEST_GO_VERSION }}'
         run: |
           docker image tag ghcr.io/${{ github.repository }}:${{ env.LATEST_GO_VERSION }} ghcr.io/${{ github.repository }}:latest
           docker image push ghcr.io/${{ github.repository }}:latest

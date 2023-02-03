@@ -21,7 +21,7 @@ These development tools are preinstalled:
 // .devcontainer/devcontainer.json
 {
     "name": "My Go Codespace",
-    "image": "ghcr.io/ryboe/gocodespace:1.19",
+    "image": "ghcr.io/ryboe/gocodespace:1.20",
     // dlv needs these capabilities. It needs to run the ptrace (process trace)
     // syscall, and we need to disable the default seccomp profile applied to
     // docker containers.

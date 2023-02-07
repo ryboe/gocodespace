@@ -21,3 +21,12 @@ RUN go install golang.org/x/tools/gopls@latest
 # This is a stricter gofmt that enforces additional formatting rules for better
 # consistency and readabilty.
 RUN go install mvdan.cc/gofumpt@latest
+
+# Install the latest release of goreleaser.
+RUN <<-EOT
+  wget --quiet --timeout=30 --output-document=- 'https://api.github.com/repos/goreleaser/goreleaser/releases/latest' |
+  jq -r ".assets[] | select(.name | test(\"goreleaser_.*?_x86_64.apk\")).browser_download_url" |
+  wget --quiet --timeout=180 --input-file=- --output-document=/tmp/goreleaser.apk
+  sudo apk add --no-cache --allow-untrusted /tmp/goreleaser.apk
+  rm /tmp/goreleaser.apk
+EOT

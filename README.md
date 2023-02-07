@@ -14,6 +14,7 @@ These development tools are preinstalled:
 * [`golangci-lint`](github.com/golangci/golangci-lint)
 * [`gopls`](https://github.com/golang/tools/blob/master/gopls)
 * [`gofumpt`](https://github.com/mvdan/gofumpt)
+* [`goreleaser`](https://github.com/goreleaser/goreleaser)
 
 ## Usage
 

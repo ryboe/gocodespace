@@ -32,15 +32,20 @@ These development tools are preinstalled:
         "--security-opt",
         "seccomp=unconfined"
     ],
-    "settings": {
-        // full list of Go extension settings: https://github.com/golang/vscode-go/wiki/settings
-        "editor.formatOnSave": true,
-        "files.insertFinalNewline": true,
-        "files.trimFinalNewlines": true,
-        "files.trimTrailingWhitespace": true
-    },
-    "extensions": [
-        "golang.go"
-    ]
+    "customizations": {
+        "vscode": {
+            "settings": {
+                // full list of Go extension settings:
+                // https://github.com/golang/vscode-go/wiki/settings
+                "editor.formatOnSave": true,
+                "files.insertFinalNewline": true,
+                "files.trimFinalNewlines": true,
+                "files.trimTrailingWhitespace": true
+            },
+            "extensions": [
+                "golang.go"
+            ]
+        }
+    }
 }
 ```

@@ -49,3 +49,27 @@ These development tools are preinstalled:
     }
 }
 ```
+
+## How To Build Locally
+
+1. Set BuildKit (next-gen docker engine) to be your default image builder:
+
+```sh
+# Build with BuildKit by default. After running this command to install the
+# buildx plugin, you can type `docker build` instead of `docker buildx build`.
+docker buildx install
+
+# --driver docker-container    run BuildKit engine as a container (moby/buildkit:buildx-stable-1)
+# --use                        switch to this new container-based docker engine that you're creating
+# --bootstrap                  start moby/buildkit container after it's "created" (pulled, really)
+docker builder create --driver docker-container --name mybuilder --use --bootstrap
+
+# --load                       save the image to the local filesystem
+# --platform linux/amd64       Codespaces only run on AMD64 processors
+# - < Dockerfile               '-' means "don't tar up the current directory and pass it to BuildKit
+#                              as a build context". We don't need a build context because we don't
+#                              need to copy any files from this repo into the container. The only
+#                              thing we need is the Dockerfile, which we're passing by redirecting
+#                              it to stdin.
+docker image build --load --build-arg GO_VERSION=1.20 --platform linux/amd64 --tag mygocodespace - < Dockerfile
+```

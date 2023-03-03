@@ -30,7 +30,7 @@ jobs:
           password: ${{ github.token }}
       - name: Build and Push Image
         if: ${{ matrix.go-version != env.LATEST_GO_VERSION }}
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           build-args: |
             GO_VERSION=${{ matrix.go-version }}
@@ -45,7 +45,7 @@ jobs:
           cache-to: type=gha,mode=max
       - name: Build and Push 'latest' Image
         if: ${{ matrix.go-version == env.LATEST_GO_VERSION }}
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           build-args: |
             GO_VERSION=${{ matrix.go-version }}

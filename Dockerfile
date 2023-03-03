@@ -23,7 +23,7 @@ EOT
 FROM ghcr.io/ryboe/alpinecodespace:latest
 ENV PATH="/home/vscode/go/bin:/usr/local/go/bin:${PATH}"
 COPY --from=build /usr/local/go/ /usr/local/go/
-COPY --from=build /go/bin/ /home/vscode/go/bin
+COPY --from=build --chown=vscode:vscode /go/bin/ /home/vscode/go/bin
 
 # Install the latest release of goreleaser.
 RUN <<-EOT

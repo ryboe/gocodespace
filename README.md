@@ -52,8 +52,6 @@ These development tools are preinstalled:
 
 ## How To Build Locally
 
-1. Set BuildKit (next-gen docker engine) to be your default image builder:
-
 ```sh
 # Build with BuildKit by default. After running this command to install the
 # buildx plugin, you can type `docker build` instead of `docker buildx build`.

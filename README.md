@@ -1,6 +1,6 @@
 # gocodespace
 
-An Alpine-based codespace for Go development
+An [Alpine](https://alpinelinux.org)-based codespace for Go development
 
 ## Features
 

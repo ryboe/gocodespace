@@ -22,7 +22,7 @@ These development tools are preinstalled:
 // .devcontainer/devcontainer.json
 {
     "name": "My Go Codespace",
-    "image": "ghcr.io/ryboe/gocodespace:1.23",
+    "image": "ghcr.io/ryboe/gocodespace:1.24",
     // dlv needs these capabilities. It needs to run the ptrace (process trace)
     // syscall, and we need to disable the default seccomp profile applied to
     // docker containers.
@@ -69,5 +69,5 @@ docker builder create --driver docker-container --name mybuilder --use --bootstr
 #                              need to copy any files from this repo into the container. The only
 #                              thing we need is the Dockerfile, which we're passing by redirecting
 #                              it to stdin.
-docker image build --load --build-arg GO_VERSION=1.23 --platform linux/amd64 --tag mygocodespace - < Dockerfile
+docker image build --load --build-arg GO_VERSION=1.24 --platform linux/amd64 --tag mygocodespace - < Dockerfile
 ```

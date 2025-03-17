@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  LATEST_GO_VERSION: "1.23"
+  LATEST_GO_VERSION: "1.24"
 
 jobs:
   build_and_upload_image:
@@ -17,8 +17,8 @@ jobs:
     strategy:
       matrix:
         go-version:
-          - "1.22"
           - "1.23"
+          - "1.24"
     steps:
       - name: Set up Docker buildx
         uses: docker/setup-buildx-action@v3

@@ -6,18 +6,15 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "[dockerfile]": {
-                    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-                },
-                "editor.formatOnSave": true,
                 "files.insertFinalNewline": true,
                 "files.trimFinalNewlines": true,
-                "files.trimTrailingWhitespace": true
+                "files.trimTrailingWhitespace": true,
             },
             "extensions": [
                 "davidanson.vscode-markdownlint",
-                "ms-azuretools.vscode-docker",
-                "redhat.vscode-yaml"
+                "docker.docker",
+                "ms-azuretools.vscode-containers",
+                "redhat.vscode-yaml",
             ]
         }
     }

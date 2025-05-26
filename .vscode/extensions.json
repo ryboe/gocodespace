@@ -3,6 +3,6 @@
         "davidanson.vscode-markdownlint",
         "docker.docker",
         "ms-azuretools.vscode-containers",
-        "redhat.vscode-yaml",
+        "redhat.vscode-yaml"
     ]
 }

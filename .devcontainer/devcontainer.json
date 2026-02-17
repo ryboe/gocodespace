@@ -1,25 +1,25 @@
 {
-    "name": "Go Codespace",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "[dockerfile]": {
-                    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
-                },
-                "editor.formatOnSave": true,
-                "files.insertFinalNewline": true,
-                "files.trimFinalNewlines": true,
-                "files.trimTrailingWhitespace": true
-            },
-            "extensions": [
-                "davidanson.vscode-markdownlint",
-                "docker.docker",
-                "ms-azuretools.vscode-containers",
-                "redhat.vscode-yaml"
-            ]
-        }
-    }
+	"name": "Go Codespace",
+	"build": {
+		"dockerfile": "Dockerfile",
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"[dockerfile]": {
+					"editor.defaultFormatter": "ms-azuretools.vscode-containers",
+				},
+				"editor.formatOnSave": true,
+				"files.insertFinalNewline": true,
+				"files.trimFinalNewlines": true,
+				"files.trimTrailingWhitespace": true,
+			},
+			"extensions": [
+				"davidanson.vscode-markdownlint",
+				"docker.docker",
+				"ms-azuretools.vscode-containers",
+				"redhat.vscode-yaml",
+			],
+		},
+	},
 }
